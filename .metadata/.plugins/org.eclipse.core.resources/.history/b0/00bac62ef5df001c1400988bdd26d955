@@ -1,0 +1,27 @@
+package site.metacoding.study.ex01;
+
+
+// 0년도 ~ 2022년도
+// 0년도 ~~~~ 끝까지 (static)
+// 1999년도 ~~ 죽을 때 까지(heap)
+// 행위가 시작될 때 메모리에 뜨는  것 (stack) - 재민이 성현이 고격
+// heap, stack, static(클래스종속 키워드)
+class Lion{
+	private int 배상태 = 0;
+	
+	public void eat() {
+		 int happy = 0;
+		 배상태 ++;
+		 happy = happy + 10;
+		 eat();
+	}
+}
+
+public class StackOverflowEx01 {
+
+	public static void main(String[] args) {
+		// 메인은 컨텍스트를 가진다. 모든 언어 공통
+		Lion lion = new Lion();
+		lion.eat();
+	}
+}
