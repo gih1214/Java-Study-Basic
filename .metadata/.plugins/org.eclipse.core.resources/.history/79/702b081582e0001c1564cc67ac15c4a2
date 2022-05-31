@@ -1,0 +1,24 @@
+package site.metacoding.study.ex00;
+
+// 요리사
+class 임꺽정 {
+	
+}
+
+// 사장
+class 장보고 {
+	임꺽정 p1;
+	
+	public 장보고(임꺽정 p1) {
+		this.p1 = p1;
+	}
+}
+
+public class MockTest {
+
+	public static void main(String[] args) {
+		임꺽정 p1 = new 임꺽정();
+		new 장보고(p1);
+	}
+
+}
