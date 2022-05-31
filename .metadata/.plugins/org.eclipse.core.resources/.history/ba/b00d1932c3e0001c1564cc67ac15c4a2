@@ -1,0 +1,44 @@
+package site.metacoding.study.ex03.protoss;
+
+public class Zealot {
+	private final String name; // 이름 -> 변경 불가능하게 final
+	private int power; // 공격력
+	private int armor; // 방어력
+	private int hp; // 체력
+	private int sh; // 쉴드(보호막)
+	
+	// 질럿은 공격을 할 수 있다.
+	// 상대방의 상태를 변경시킴
+	public void attack() {
+		
+	}
+	
+	public void powerUpgrade() {
+		power++;
+		System.out.println("공격력이 1 증가 하였습니다.");
+	}
+	
+	public void armorUpgrade() {
+		armor++;
+		System.out.println("방어력이 1 증가 하였습니다.");
+	}
+	
+	// 디폴트 생성자
+	// final이 있으면 디폴트 생성자를 만들 수 없다..
+	public Zealot(String name) {
+		super(); // super는 제일 위에 있어야 한다.
+		this.name = name;
+	}
+
+	// 풀 생성자
+	public Zealot(String name, int power, int armor, int hp, int sh) {
+		super();
+		this.name = name;
+		this.power = power;
+		this.armor = armor;
+		this.hp = hp;
+		this.sh = sh;
+	}
+	
+	
+}
