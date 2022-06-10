@@ -1,24 +1,18 @@
 package site.metacoding.study.ex03.protoss;
 
-public class Zealot {
+public class Dragoon {
 	// final이 있으면 디폴트 생성자를 만들 수 없다.
-	public final String name; // 이름 -> 변경 불가능하게 final
+	private final String name; // 이름 -> 변경 불가능하게 final
 	private static int power = 10; // 공격력 -> 질럿 생성 전에 공격,방어력 증가 가능하기 때문에 static
 	private static int armor = 10; // 방어력
 	private int hp; // 체력
+	private int sh; // 쉴드(보호막)
 	
-	public int getPower() {
-		return power;
-	}
-
-	public void 공격당함(Zealot unit) { // 수동
-		hp = hp - unit.getPower();
-		System.out.println(this.name+"가 "+unit.name+"에게 공격당했습니다. 현재 hp : "+this.hp);
-	}
-
-	public void 공격당함(Dragoon unit) { // 수동
-		hp = hp - unit.getPower();
-		System.out.println(this.name+"가 "+unit.name+"에게 공격당했습니다. 현재 hp : "+this.hp);
+	// 질럿은 공격을 할 수 있다.
+	// 상대방의 상태를 변경시킴
+	// 어택은 내 
+	public void attack() {
+		
 	}
 	
 	// 공격력 증가
@@ -34,10 +28,11 @@ public class Zealot {
 	}
 
 	// 생성자
-	public Zealot(String name) {
+	public Dragoon(String name) {
 		super(); // super는 제일 위에 있어야 한다.
 		this.name = name;
 		this.hp = 100; // 정해진 값이므로 초기화
+		this.sh = 100; // 정해진 값이므로 초기화
 	}
 	
 }
