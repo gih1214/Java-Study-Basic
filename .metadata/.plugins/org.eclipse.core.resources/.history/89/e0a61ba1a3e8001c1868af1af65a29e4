@@ -1,0 +1,7 @@
+package site.metacoding.study.ex03;
+
+import site.metacoding.study.ex03.protoss.Protoss;
+
+public interface StarAble {
+	void 공격(Protoss unit);
+}
